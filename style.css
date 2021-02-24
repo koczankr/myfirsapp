@@ -53,10 +53,10 @@ body {
     color: #fefefe;
 }
 
-.caption h2, .caption p {
+.caption h1, .caption p {
     margin: 0;
 }
 
-.caption h2 {
+.caption h1 {
     margin-bottom: 0.5em;
 }
