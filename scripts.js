@@ -43,8 +43,33 @@ let imagesData = [
 ];
 
 
-$( document ).ready(function() {
+/*$( document ).ready(function() {
     $('#photo').attr('src', imagesData[currentPhoto].photo);
     $('#photo-title').html(imagesData[currentPhoto].title);
     $('#photo-description').html(imagesData[currentPhoto].description);
 });
+*/
+
+let loadPhoto = (photoNumber) => {
+    $('#photo').attr('src', imagesData[photoNumber].photo);
+    $('#photo-title').html(imagesData[photoNumber].title);
+    $('#photo-description').html(imagesData[photoNumber].description);
+  }
+  
+  loadPhoto(currentPhoto);
+  
+  $('#right-arrow').click(() => {
+      if (currentPhoto < imagesData.length - 1) {
+          currentPhoto++;
+      }
+    loadPhoto(currentPhoto);
+//    console.log(currentPhoto);
+})
+
+$('#left-arrow').click(() => {
+      if (currentPhoto > 0) {
+          currentPhoto--;
+      }
+    console.log(currentPhoto);
+//    loadPhoto(currentPhoto);
+  })
